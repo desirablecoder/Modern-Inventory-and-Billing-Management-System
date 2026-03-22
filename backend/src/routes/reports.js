@@ -1,0 +1,29 @@
+const express = require("express");
+const {
+  getInventoryReport,
+  getTransactionReport,
+  getSaleTransactionReport,
+  getPurchaseTransactionReport,
+  getCustomerReport,
+  getVendorReport,
+  getDashboardSummary,
+} = require("../controllers/reportController");
+const { authenticate } = require("../middleware/auth");
+const { requireProfileCompletion } = require("../middleware/profileCompletion");
+
+const router = express.Router();
+
+// Apply authentication, profile completion, and business access middleware to all routes
+router.use(authenticate);
+router.use(requireProfileCompletion);
+//router.use(checkBusinessAccess);
+
+// Report routes
+router.get("/dashboard", getDashboardSummary);
+router.get("/inventory", getInventoryReport);
+router.get("/transactions", getTransactionReport);
+router.get("/transactions", getTransactionReport);
+router.get("/customer/:id", getCustomerReport);
+router.get("/vendor/:id", getVendorReport);
+
+module.exports = router;

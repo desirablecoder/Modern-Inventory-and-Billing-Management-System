@@ -1,0 +1,47 @@
+{
+  "name": "inventory-billing-backend",
+  "version": "1.0.0",
+  "description": "A backend system for small businesses to manage products, customers, vendors, transactions, and basic reports with authentication.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inventory",
+    "billing",
+    "management",
+    "backend",
+    "api",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Siddhartha Kunwar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x0lg0n/Inventory-Billing-Management-System.git"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.0",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.1",
+    "fix": "^0.0.6",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.4",
+    "morgan": "^1.10.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
